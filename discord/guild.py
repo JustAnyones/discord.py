@@ -2181,8 +2181,7 @@ class Guild(Hashable):
             'name': name,
         }
 
-        if description:
-            payload['description'] = description
+        payload['description'] = description or ""
 
         try:
             emoji = unicodedata.name(emoji)
